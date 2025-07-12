@@ -1,0 +1,172 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+aside {
+  background: #f0eae1;
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  color: purple;
+  margin-bottom: 30px;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile .name {
+  font-weight: bold;
+}
+
+.profile .role {
+  color: purple;
+  font-size: 14px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+nav li.active,
+nav li:hover {
+  background: purple;
+  color: white;
+}
+
+nav li i {
+  width: 20px;
+  text-align: center;
+}
+
+.logout {
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+main {
+  flex: 1;
+  padding: 30px;
+  overflow: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.students-list {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  font-weight: 600;
+  color: #555;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.action-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background: purple;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit,
+.delete {
+  cursor: pointer;
+  color: purple;
+}
+
+.edit:hover,
+.delete:hover {
+  color: darkmagenta;
+}
+
+.student-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  aside {
+    width: 60px;
+    padding: 10px;
+  }
+
+  aside .profile,
+  aside .logout,
+  aside .logo,
+  aside nav li span {
+    display: none;
+  }
+
+  main {
+    padding: 10px;
+  }
+}
