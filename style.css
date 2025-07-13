@@ -170,3 +170,235 @@ tbody tr:hover {
     padding: 10px;
   }
 }
+
+
+
+
+
+/* ==== MODAL FLOTANTE PARA AGREGAR ESTUDIANTE ==== */
+
+.modal-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.student-form {
+  background-color: #ffffff;
+  padding: 30px 24px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.student-form h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.student-form input {
+  padding: 12px;
+  border: 1px solid var(--border-input);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-primary);
+  background-color: var(--bg-input);
+  transition: border 0.2s ease;
+}
+
+.student-form input:focus {
+  border-color: var(--bg-button);
+  outline: none;
+}
+
+.student-form button[type="submit"] {
+  background-color: purple;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.student-form button[type="submit"]:hover {
+  background-color: rgb(189, 3, 189)
+}
+
+.student-form button[type="button"] {
+  background-color: purple;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.student-form button[type="button"]:hover {
+  background-color:rgb(189 , 3,189)
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#logoutBtn {
+  padding: 12px 24px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: 20px auto 0 auto;
+  width: 80%;
+  max-width: 200px;
+  display: block;
+  text-align: center;
+}
+
+#logoutBtn:hover {
+  background-color: rgb(189, 3, 189);
+}
+
+/* MODAL FLOTANTE MEJORADO */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.45);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  margin: auto;
+  padding: 36px 28px 24px 28px;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(80,0,80,0.18);
+  max-width: 440px;
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content h2 {
+  margin-bottom: 22px;
+  font-size: 24px;
+  font-weight: 700;
+  color: purple;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  font-size: 22px;
+  color: #888;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color 0.2s;
+}
+.close-btn:hover {
+  color: purple;
+}
+
+/* FORMULARIO DE ESTUDIANTE */
+.student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.student-form input {
+  padding: 13px;
+  border: 1.5px solid #d1c4e9;
+  border-radius: 7px;
+  font-size: 15px;
+  color: #333;
+  background-color: #f6f6fa;
+  transition: border 0.2s;
+}
+
+.student-form input:focus {
+  border-color: purple;
+  outline: none;
+}
+
+.student-form .btn {
+  background: linear-gradient(90deg, purple 70%, rgb(189, 3, 189));
+  color: #fff;
+  border: none;
+  padding: 13px;
+  font-size: 16px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(189,3,189,0.08);
+}
+
+.student-form .btn:hover {
+  background: linear-gradient(90deg, rgb(189, 3, 189), purple 70%);
+}
+
+/* BOTÓN CANCELAR */
+.student-form .cancel-btn {
+  background: #fff;
+  color: purple;
+  border: 1.5px solid purple;
+  padding: 13px;
+  font-size: 16px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: 0 2px 8px rgba(189,3,189,0.04);
+}
+
+.student-form .cancel-btn:hover {
+  background: purple;
+  color: #fff;
+  border-color: rgb(189, 3, 189);
+}

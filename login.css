@@ -1,0 +1,127 @@
+/* RESET BÁSICO */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* CONTENEDOR PRINCIPAL */
+#loginForm, #registerForm {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* TÍTULO "Iniciar Sesión" */
+h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 30px;
+  transform: translate(300px, -200px);
+}
+
+/* ESTILOS COMUNES PARA INPUTS */
+#loginForm input, #registerForm input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* EFECTO FOCUS */
+#loginForm input:focus, #registerForm input:focus {
+  outline: none;
+  border-color: #4285f4;
+}
+
+/* BOTÓN "Entrar" */
+#loginForm button, #registerForm button {
+  width: 100%;
+  padding: 12px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#loginForm button:hover, #registerForm button:hover {
+  background-color: rgb(202, 12, 202);
+}
+
+/* MENSAJE DE ERROR */
+#errorMsg {
+  text-align: center;
+  margin-top: 20px;
+  color: #d32f2f;
+  font-size: 14px;
+}
+
+/* Estilo para el botón de mostrar registro */
+#showRegisterBtn {
+  padding: 12px 24px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+  transform: translate(-360px, 250px);
+}
+
+#showRegisterBtn:hover {
+  background-color: rgb(189, 3, 189);
+}
+
+/* Estilo para el botón de volver al login */
+#backToLoginBtn {
+  padding: 12px 24px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#backToLoginBtn:hover {
+  background-color: rgb(189, 3, 189);
+}
+
+/* Estilo para el botón de logout */
+#logoutBtn {
+  padding: 12px 24px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 200px;
+  display: block;
+}
+
+#logoutBtn:hover {
+  background-color: rgb(189, 3, 189);
+}
