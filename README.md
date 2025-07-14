@@ -87,3 +87,16 @@ Backend simulado con [json-server](https://github.com/typicode/json-server)
 - **Google Fonts (Inter)**: Tipografía.
 
 ---
+
+## ¿Cómo arrancar json-server?
+
+Para iniciar el backend simulado con json-server, sigue estos pasos:
+
+1. Abre una terminal en la carpeta donde está tu archivo `db.json`.
+2. Ejecuta el siguiente comando:
+
+   ```bash
+   json-server --watch db.json --port 3000
+   ```
+
+Esto iniciará el servidor en [http://localhost:3000](http://localhost:3000) y podrás acceder a los endpoints `/users` y `/students` desde tu navegador o herramientas como Postman.

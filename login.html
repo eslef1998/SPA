@@ -1,38 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login</title>
-  <link rel="stylesheet" href="login.css">
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8" /> <!-- Codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Responsive design -->
+  <title>Login</title> <!-- Título de la página -->
+  <link rel="stylesheet" href="login.css"> <!-- Hoja de estilos CSS -->
 </head>
 <body>
-  <h2 id="loginTitle">Iniciar Sesión</h2>
+  <!-- ========== SECCIÓN DE LOGIN ========== -->
+  <h2 id="loginTitle">Iniciar Sesión</h2> <!-- Título del formulario -->
+  
+  <!-- Formulario de login -->
   <form id="loginForm">
-    <input type="text" id="username" placeholder="Usuario" required />
-    <input type="password" id="password" placeholder="Contraseña" required />
+    <!-- Campo de usuario -->
+    <input 
+      type="text" 
+      id="username" 
+      placeholder="Usuario" 
+      required <!-- Campo obligatorio -->
+    />
+    
+    <!-- Campo de contraseña -->
+    <input 
+      type="password" 
+      id="password" 
+      placeholder="Contraseña" 
+      required 
+    />
+    
+    <!-- Botón de submit -->
     <button type="submit">Entrar</button>
   </form>
+
+  <!-- Mensaje de error (inicialmente vacío) -->
   <p id="errorMsg" style="color:red;"></p>
 
+  <!-- Botón para alternar a registro -->
   <div style="text-align:center; margin-top:40px;">
-    <button id="showRegisterBtn" type="button">¿No tienes cuenta? Registrarse</button>
+    <button id="showRegisterBtn" type="button">
+      ¿No tienes cuenta? Registrarse
+    </button>
   </div>
 
+  <!-- ========== SECCIÓN DE REGISTRO (oculta inicialmente) ========== -->
   <div id="registerContainer" style="display:none;">
-    <h2>Registrarse</h2>
+    <h2>Registrarse</h2> <!-- Título del formulario de registro -->
+    
+    <!-- Formulario de registro -->
     <form id="registerForm">
-      <input type="text" id="regUsername" placeholder="Usuario" required />
-      <input type="password" id="regPassword" placeholder="Contraseña" required />
-      <input type="password" id="regPassword2" placeholder="Verificar Contraseña" required />
+      <!-- Campos de registro -->
+      <input 
+        type="text" 
+        id="regUsername" 
+        placeholder="Usuario" 
+        required 
+      />
+      <input 
+        type="password" 
+        id="regPassword" 
+        placeholder="Contraseña" 
+        required 
+      />
+      <input 
+        type="password" 
+        id="regPassword2" 
+        placeholder="Verificar Contraseña" 
+        required 
+      />
+      
+      <!-- Botón de submit -->
       <button type="submit">Registrar</button>
     </form>
+    
+    <!-- Mensaje de error para registro -->
     <p id="regErrorMsg" style="color:red;"></p>
+    
+    <!-- Botón para volver al login -->
     <div style="text-align:center; margin-top:20px;">
-      <button id="backToLoginBtn" type="button">Volver al login</button>
+      <button id="backToLoginBtn" type="button">
+        Volver al login
+      </button>
     </div>
   </div>
 
+  <!-- Carga del script JavaScript (módulo ES6) -->
   <script type="module" src="./login.js"></script>
 </body>
 </html>
